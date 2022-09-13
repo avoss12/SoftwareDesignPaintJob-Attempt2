@@ -42,11 +42,23 @@ namespace SoftwareDesignProjectPaintJob
 
             txtCeilingSF.Text = Convert.ToString(result1);
             txtCeilingEstimateTotal.Text = Convert.ToString(result2);
+            txtRoomName.Text = roomNameList.Text;
+
+            Ceilings newCeiling = new Ceilings(roomNameList.Text, txtCeilngPaintColor.Text, ceilingLength, ceilingWidth, result1);
+
+            Type thisType = newCeiling.GetType();
+            txtThisType.Text = thisType.Name.ToString();
         }
 
         private void txtCeilingEstimateTotal_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
