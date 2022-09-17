@@ -34,17 +34,17 @@ namespace SoftwareDesignProjectPaintJob
 
         private void btnClicktoCalculate_Click(object sender, EventArgs e)
         {
-            decimal ceilingLength = Convert.ToDecimal(txtCeilingLength.Text);
-            decimal ceilingWidth = Convert.ToDecimal(txtCeilingWidth.Text);
-            decimal ceilingRate = Convert.ToDecimal(txtCeilingRate.Text);   
-            decimal result1 = ceilingLength * ceilingWidth;
-            decimal result2 = result1 * ceilingRate;
+            decimal itemLength = Convert.ToDecimal(txtItemLength.Text);
+            decimal itemWidthHeight = Convert.ToDecimal(txtItemWidthHeight.Text);
+            decimal itemRate = Convert.ToDecimal(txtItemRate.Text);   
+            decimal itemSF = itemLength * itemWidthHeight;
+            decimal result2 = itemSF * itemRate;
 
-            txtCeilingSF.Text = Convert.ToString(result1);
-            txtCeilingEstimateTotal.Text = Convert.ToString(result2);
-            txtRoomName.Text = roomNameList.Text;
+            txtItemSF.Text = Convert.ToString(itemSF);
+            txtItemEstTotal.Text = Convert.ToString(result2);
+            txtRoomName.Text = itemNameList.Text;
 
-            Ceilings newCeiling = new Ceilings(roomNameList.Text, txtCeilngPaintColor.Text, ceilingLength, ceilingWidth, result1);
+            Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
 
             Type thisType = newCeiling.GetType();
             txtThisType.Text = thisType.Name.ToString();
@@ -60,5 +60,14 @@ namespace SoftwareDesignProjectPaintJob
 
         }
 
+        private void roomNameList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtThisType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

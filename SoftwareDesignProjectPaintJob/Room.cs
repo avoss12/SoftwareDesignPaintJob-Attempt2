@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace SoftwareDesignProjectPaintJob
 {
-    public class Room
+    public class Item
     {
-        public string RoomName { get; set; }
-        public string RoomColor { get; set; }
-        public decimal RoomLength { get; set; }
-        public decimal RoomWidth { get; set; }
-        public decimal RoomSF { get; set; }
+        public string ItemName { get; set; }
+        public string ItemColor { get; set; }
+        public decimal ItemLength { get; set; }
+        public decimal ItemWidthHeight { get; set; }
+        public decimal ItemSF { get; set; }
 
 
-        public Room(string inRoomName, string inRoomColor, decimal inRoomLength, decimal inRoomWidth, decimal inRoomSF)
+        public Item(string inItemName, string inItemColor, decimal inItemLength, decimal inItemWidthHeight, decimal inItemSF)
         {
-            RoomName = inRoomName;
-            RoomColor = inRoomColor;
-            RoomLength = inRoomLength;
-            RoomWidth = inRoomWidth;
-            RoomSF = inRoomSF;
+            ItemName = inItemName;
+            ItemColor = inItemColor;
+            ItemLength = inItemLength;
+            ItemWidthHeight = inItemWidthHeight;
+            ItemSF = inItemSF;
         }
 
 
     }
 
-    public class Ceilings : Room
+    public class Ceilings : Item
     {
-        public Ceilings(string inRoomName, string inRoomColor, decimal inRoomLength, decimal inRoomWidth, decimal inRoomSF) : base(inRoomName, inRoomColor, inRoomLength, inRoomWidth, inRoomSF)
+        public Ceilings(string inItemName, string inItemColor, decimal inItemLength, decimal inItemWidthHeight, decimal inItemSF) : base(inItemName, inItemColor, inItemLength, inItemWidthHeight, inItemSF)
         {
         }
     }
