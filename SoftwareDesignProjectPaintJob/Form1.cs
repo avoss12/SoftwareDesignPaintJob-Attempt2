@@ -38,23 +38,34 @@ namespace SoftwareDesignProjectPaintJob
             decimal itemWidthHeight = Convert.ToDecimal(txtItemWidthHeight.Text);
             decimal itemRate = Convert.ToDecimal(txtItemRate.Text);   
             decimal itemSF = itemLength * itemWidthHeight;
-            decimal itemEstTotal = itemSF * itemRate;
-           
+            decimal result2 = itemSF * itemRate;
+
             txtItemSF.Text = Convert.ToString(itemSF);
-            txtItemEstTotal.Text = Convert.ToString(itemEstTotal);
+            txtItemEstTotal.Text = Convert.ToString(result2);
             txtRoomName.Text = itemNameList.Text;
 
             Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
 
             Type thisType = newCeiling.GetType();
             txtThisType.Text = thisType.Name.ToString();
+
+            item_class obj_item_iclass = new item_class();
+            obj_item_iclass.doCalc(itemLength, itemWidthHeight, itemRate);
+            txtInterfaceEstimate.Text = obj_item_iclass.itemEstTotal.ToString();
+
         }
 
-        private void txtItemEstTotal_TextChanged(object sender, EventArgs e)
+        private void txtCeilingEstimateTotal_TextChanged(object sender, EventArgs e)
         {
 
-        }       
-        private void itemNameList_SelectedIndexChanged(object sender, EventArgs e)
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roomNameList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

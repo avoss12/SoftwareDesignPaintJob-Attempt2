@@ -1,28 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj": {}
+    "C:\\Users\\annah\\source\\repos\\725\\AndrewVoss\\Module2 - interface\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj": {
+    "C:\\Users\\annah\\source\\repos\\725\\AndrewVoss\\Module2 - interface\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
+        "projectUniqueName": "C:\\Users\\annah\\source\\repos\\725\\AndrewVoss\\Module2 - interface\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
         "projectName": "SoftwareDesignProjectPaintJob",
-        "projectPath": "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
-        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\obj\\",
+        "projectPath": "C:\\Users\\annah\\source\\repos\\725\\AndrewVoss\\Module2 - interface\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
+        "packagesPath": "C:\\Users\\annah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\annah\\source\\repos\\725\\AndrewVoss\\Module2 - interface\\SoftwareDesignProjectPaintJob\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\annah\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0-windows"
+          "net6.0-windows7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -49,8 +49,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -62,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
