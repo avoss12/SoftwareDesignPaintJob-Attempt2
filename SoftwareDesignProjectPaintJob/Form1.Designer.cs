@@ -139,7 +139,7 @@
             this.txtItemEstTotal.Name = "txtItemEstTotal";
             this.txtItemEstTotal.Size = new System.Drawing.Size(100, 23);
             this.txtItemEstTotal.TabIndex = 10;
-            this.txtItemEstTotal.TextChanged += new System.EventHandler(this.txtCeilingEstimateTotal_TextChanged);
+            this.txtItemEstTotal.TextChanged += new System.EventHandler(this.txtItemEstTotal_TextChanged);
             // 
             // lblItemEstTotal
             // 
@@ -212,7 +212,7 @@
             this.itemNameList.Name = "itemNameList";
             this.itemNameList.Size = new System.Drawing.Size(127, 49);
             this.itemNameList.TabIndex = 16;
-            this.itemNameList.SelectedIndexChanged += new System.EventHandler(this.roomNameList_SelectedIndexChanged);
+            this.itemNameList.SelectedIndexChanged += new System.EventHandler(this.itemNameList_SelectedIndexChanged);
             // 
             // lblSelectItemList
             // 
