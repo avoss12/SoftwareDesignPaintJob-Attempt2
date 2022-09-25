@@ -38,10 +38,8 @@ namespace SoftwareDesignProjectPaintJob
             decimal itemWidthHeight = Convert.ToDecimal(txtItemWidthHeight.Text);
             decimal itemRate = Convert.ToDecimal(txtItemRate.Text);   
             decimal itemSF = itemLength * itemWidthHeight;
-            decimal result2 = itemSF * itemRate;
 
             txtItemSF.Text = Convert.ToString(itemSF);
-            txtItemEstTotal.Text = Convert.ToString(result2);
             txtRoomName.Text = itemNameList.Text;
 
             Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
@@ -71,6 +69,16 @@ namespace SoftwareDesignProjectPaintJob
         }
 
         private void txtThisType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtInterfaceEstimate_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblReflectionClassType_Click(object sender, EventArgs e)
         {
 
         }
