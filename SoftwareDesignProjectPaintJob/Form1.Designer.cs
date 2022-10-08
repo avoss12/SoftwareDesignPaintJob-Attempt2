@@ -37,7 +37,6 @@
             this.lblItemSF = new System.Windows.Forms.Label();
             this.txtItemRate = new System.Windows.Forms.TextBox();
             this.lblItemRate = new System.Windows.Forms.Label();
-            this.txtItemEstTotal = new System.Windows.Forms.TextBox();
             this.lblItemEstTotal = new System.Windows.Forms.Label();
             this.lblPaintJobEstimator = new System.Windows.Forms.Label();
             this.lblRoomName = new System.Windows.Forms.Label();
@@ -48,6 +47,9 @@
             this.lblSelectItemList = new System.Windows.Forms.Label();
             this.txtThisType = new System.Windows.Forms.TextBox();
             this.lblReflectionClassType = new System.Windows.Forms.Label();
+            this.txtInterfaceEstimate = new System.Windows.Forms.TextBox();
+            this.txtApiReturnID = new System.Windows.Forms.TextBox();
+            this.lblApiReturnID = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClicktoCalculate
@@ -133,14 +135,6 @@
             this.lblItemRate.Text = "Item Rate";
             this.lblItemRate.Click += new System.EventHandler(this.lblCeilingRate_Click);
             // 
-            // txtItemEstTotal
-            // 
-            this.txtItemEstTotal.Location = new System.Drawing.Point(657, 169);
-            this.txtItemEstTotal.Name = "txtItemEstTotal";
-            this.txtItemEstTotal.Size = new System.Drawing.Size(100, 23);
-            this.txtItemEstTotal.TabIndex = 10;
-            this.txtItemEstTotal.TextChanged += new System.EventHandler(this.txtItemEstTotal_TextChanged);
-            // 
             // lblItemEstTotal
             // 
             this.lblItemEstTotal.AutoSize = true;
@@ -212,7 +206,7 @@
             this.itemNameList.Name = "itemNameList";
             this.itemNameList.Size = new System.Drawing.Size(127, 49);
             this.itemNameList.TabIndex = 16;
-            this.itemNameList.SelectedIndexChanged += new System.EventHandler(this.itemNameList_SelectedIndexChanged);
+            this.itemNameList.SelectedIndexChanged += new System.EventHandler(this.roomNameList_SelectedIndexChanged);
             // 
             // lblSelectItemList
             // 
@@ -244,12 +238,44 @@
             this.lblReflectionClassType.Size = new System.Drawing.Size(150, 17);
             this.lblReflectionClassType.TabIndex = 19;
             this.lblReflectionClassType.Text = "Reflection Class Type";
+            this.lblReflectionClassType.Click += new System.EventHandler(this.lblReflectionClassType_Click);
+            // 
+            // txtInterfaceEstimate
+            // 
+            this.txtInterfaceEstimate.Location = new System.Drawing.Point(657, 172);
+            this.txtInterfaceEstimate.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInterfaceEstimate.Name = "txtInterfaceEstimate";
+            this.txtInterfaceEstimate.Size = new System.Drawing.Size(106, 23);
+            this.txtInterfaceEstimate.TabIndex = 20;
+            this.txtInterfaceEstimate.TextChanged += new System.EventHandler(this.txtInterfaceEstimate_TextChanged);
+            // 
+            // txtApiReturnID
+            // 
+            this.txtApiReturnID.Location = new System.Drawing.Point(174, 475);
+            this.txtApiReturnID.Name = "txtApiReturnID";
+            this.txtApiReturnID.Size = new System.Drawing.Size(204, 23);
+            this.txtApiReturnID.TabIndex = 21;
+            this.txtApiReturnID.TextChanged += new System.EventHandler(this.txtApiReturnID_TextChanged);
+            // 
+            // lblApiReturnID
+            // 
+            this.lblApiReturnID.AutoSize = true;
+            this.lblApiReturnID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblApiReturnID.Location = new System.Drawing.Point(46, 479);
+            this.lblApiReturnID.Name = "lblApiReturnID";
+            this.lblApiReturnID.Size = new System.Drawing.Size(101, 18);
+            this.lblApiReturnID.TabIndex = 22;
+            this.lblApiReturnID.Text = "API Return ID";
+            this.lblApiReturnID.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1327, 657);
+            this.ClientSize = new System.Drawing.Size(1327, 630);
+            this.Controls.Add(this.lblApiReturnID);
+            this.Controls.Add(this.txtApiReturnID);
+            this.Controls.Add(this.txtInterfaceEstimate);
             this.Controls.Add(this.lblReflectionClassType);
             this.Controls.Add(this.txtThisType);
             this.Controls.Add(this.lblSelectItemList);
@@ -259,7 +285,6 @@
             this.Controls.Add(this.txtRoomName);
             this.Controls.Add(this.lblRoomName);
             this.Controls.Add(this.lblPaintJobEstimator);
-            this.Controls.Add(this.txtItemEstTotal);
             this.Controls.Add(this.lblItemEstTotal);
             this.Controls.Add(this.txtItemRate);
             this.Controls.Add(this.lblItemRate);
@@ -289,7 +314,6 @@
         private Label lblItemSF;
         private TextBox txtItemRate;
         private Label lblItemRate;
-        private TextBox txtItemEstTotal;
         private Label lblItemEstTotal;
         private Label lblPaintJobEstimator;
         private Label lblRoomName;
@@ -300,5 +324,8 @@
         private Label lblSelectItemList;
         private TextBox txtThisType;
         private Label lblReflectionClassType;
+        private TextBox txtInterfaceEstimate;
+        private TextBox txtApiReturnID;
+        private Label lblApiReturnID;
     }
 }
