@@ -82,5 +82,15 @@ namespace SoftwareDesignProjectPaintJob
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApiReturnID_TextChanged(object sender, EventArgs e)
+        {
+        
+        }
     }
 }

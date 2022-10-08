@@ -20,8 +20,9 @@ namespace SoftwareDesignProjectPaintJob
         {
             
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
             CallWhoAmI_API();
+            Application.Run(new Form1());
+            
         }
 
         static void CallWhoAmI_API()
@@ -87,12 +88,13 @@ namespace SoftwareDesignProjectPaintJob
                         response.Content.ReadAsStringAsync().Result);
                     Guid userId = (Guid)body["UserId"];
 
-                    Console.WriteLine("Your user ID is {0}", userId);
+                    txtApiReturnID = ("Your user ID is {0}", userId);
+                
                 }
                 else
                 {
-                    Console.WriteLine("Web API call failed");
-                    Console.WriteLine("Reason: " + response.ReasonPhrase);
+                    txtApiReturnID = ("Web API call failed");
+                    txtApiReturnID = ("Reason: " + response.ReasonPhrase);
                 }
                 #endregion Web API call
 
