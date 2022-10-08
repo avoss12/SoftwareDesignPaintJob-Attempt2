@@ -33,21 +33,6 @@ namespace SoftwareDesignProjectPaintJob
         {
         }
     }
+}            
 
-    public class item_class : IItemEstInterface
-    {
-        public decimal itemEstTotal;
-        public void doCalc(decimal itemLength, decimal itemWidthHeight, decimal itemRate)
-        {
-            decimal l, w, r;
-            l = itemLength;
-            w = itemWidthHeight;
-            r = itemRate;
-            itemEstTotal = l * w * r;
-        }
-    }
-
-
-}
-
-
+       

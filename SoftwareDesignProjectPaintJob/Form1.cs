@@ -38,32 +38,23 @@ namespace SoftwareDesignProjectPaintJob
             decimal itemWidthHeight = Convert.ToDecimal(txtItemWidthHeight.Text);
             decimal itemRate = Convert.ToDecimal(txtItemRate.Text);   
             decimal itemSF = itemLength * itemWidthHeight;
-
+            decimal itemEstTotal = itemSF * itemRate;
+           
             txtItemSF.Text = Convert.ToString(itemSF);
+            txtItemEstTotal.Text = Convert.ToString(itemEstTotal);
             txtRoomName.Text = itemNameList.Text;
 
             Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
 
             Type thisType = newCeiling.GetType();
             txtThisType.Text = thisType.Name.ToString();
-
-            item_class obj_item_iclass = new item_class();
-            obj_item_iclass.doCalc(itemLength, itemWidthHeight, itemRate);
-            txtInterfaceEstimate.Text = obj_item_iclass.itemEstTotal.ToString();
-
         }
 
-        private void txtCeilingEstimateTotal_TextChanged(object sender, EventArgs e)
+        private void txtItemEstTotal_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roomNameList_SelectedIndexChanged(object sender, EventArgs e)
+        }       
+        private void itemNameList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -71,26 +62,6 @@ namespace SoftwareDesignProjectPaintJob
         private void txtThisType_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void txtInterfaceEstimate_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblReflectionClassType_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtApiReturnID_TextChanged(object sender, EventArgs e)
-        {
-        
         }
     }
 }
