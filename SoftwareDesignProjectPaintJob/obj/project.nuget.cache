@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "blHdDCwa4XSwFeuvhcGiseBgcxZi7ml3knC/i4+fwoqlEDwcRI9vE4O+hvOB+Nx+OyuFa+JLIqLNC+yaThSsWw==",
+  "dgSpecHash": "38oanHU/jTrWq3ZCreLWH4A6EPkZVZPNOl/Izt8lHJJ4H8FSi2jP3aDimrxoD23FPSpHo1r4ctarQdfBtv1Ojw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
+  "projectFilePath": "C:\\Users\\andre\\source\\repos\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.identity.client\\4.47.1\\microsoft.identity.client.4.47.1.nupkg.sha512",
     "C:\\Users\\andre\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.22.0\\microsoft.identitymodel.abstractions.6.22.0.nupkg.sha512",

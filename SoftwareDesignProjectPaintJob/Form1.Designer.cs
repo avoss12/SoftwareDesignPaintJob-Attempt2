@@ -48,8 +48,9 @@
             this.txtThisType = new System.Windows.Forms.TextBox();
             this.lblReflectionClassType = new System.Windows.Forms.Label();
             this.txtInterfaceEstimate = new System.Windows.Forms.TextBox();
-            this.txtApiReturnID = new System.Windows.Forms.TextBox();
-            this.lblApiReturnID = new System.Windows.Forms.Label();
+            this.txtApiValue = new System.Windows.Forms.TextBox();
+            this.lblApiValue = new System.Windows.Forms.Label();
+            this.btnApiValue = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClicktoCalculate
@@ -249,32 +250,44 @@
             this.txtInterfaceEstimate.TabIndex = 20;
             this.txtInterfaceEstimate.TextChanged += new System.EventHandler(this.txtInterfaceEstimate_TextChanged);
             // 
-            // txtApiReturnID
+            // txtApiValue
             // 
-            this.txtApiReturnID.Location = new System.Drawing.Point(174, 475);
-            this.txtApiReturnID.Name = "txtApiReturnID";
-            this.txtApiReturnID.Size = new System.Drawing.Size(204, 23);
-            this.txtApiReturnID.TabIndex = 21;
-            this.txtApiReturnID.TextChanged += new System.EventHandler(this.txtApiReturnID_TextChanged);
+            this.txtApiValue.Location = new System.Drawing.Point(174, 475);
+            this.txtApiValue.Name = "txtApiValue";
+            this.txtApiValue.Size = new System.Drawing.Size(204, 23);
+            this.txtApiValue.TabIndex = 21;
+            this.txtApiValue.TextChanged += new System.EventHandler(this.txtApiReturnID_TextChanged);
             // 
-            // lblApiReturnID
+            // lblApiValue
             // 
-            this.lblApiReturnID.AutoSize = true;
-            this.lblApiReturnID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblApiReturnID.Location = new System.Drawing.Point(46, 479);
-            this.lblApiReturnID.Name = "lblApiReturnID";
-            this.lblApiReturnID.Size = new System.Drawing.Size(101, 18);
-            this.lblApiReturnID.TabIndex = 22;
-            this.lblApiReturnID.Text = "API Return ID";
-            this.lblApiReturnID.Click += new System.EventHandler(this.label1_Click);
+            this.lblApiValue.AutoSize = true;
+            this.lblApiValue.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblApiValue.Location = new System.Drawing.Point(46, 479);
+            this.lblApiValue.Name = "lblApiValue";
+            this.lblApiValue.Size = new System.Drawing.Size(76, 18);
+            this.lblApiValue.TabIndex = 22;
+            this.lblApiValue.Text = "API Value";
+            this.lblApiValue.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnApiValue
+            // 
+            this.btnApiValue.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnApiValue.Location = new System.Drawing.Point(92, 419);
+            this.btnApiValue.Name = "btnApiValue";
+            this.btnApiValue.Size = new System.Drawing.Size(212, 32);
+            this.btnApiValue.TabIndex = 23;
+            this.btnApiValue.Text = "Click to Run API";
+            this.btnApiValue.UseVisualStyleBackColor = true;
+            this.btnApiValue.Click += new System.EventHandler(this.btnApiValue_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 630);
-            this.Controls.Add(this.lblApiReturnID);
-            this.Controls.Add(this.txtApiReturnID);
+            this.Controls.Add(this.btnApiValue);
+            this.Controls.Add(this.lblApiValue);
+            this.Controls.Add(this.txtApiValue);
             this.Controls.Add(this.txtInterfaceEstimate);
             this.Controls.Add(this.lblReflectionClassType);
             this.Controls.Add(this.txtThisType);
@@ -325,7 +338,8 @@
         private TextBox txtThisType;
         private Label lblReflectionClassType;
         private TextBox txtInterfaceEstimate;
-        private TextBox txtApiReturnID;
-        private Label lblApiReturnID;
+        private TextBox txtApiValue;
+        private Label lblApiValue;
+        private Button btnApiValue;
     }
 }

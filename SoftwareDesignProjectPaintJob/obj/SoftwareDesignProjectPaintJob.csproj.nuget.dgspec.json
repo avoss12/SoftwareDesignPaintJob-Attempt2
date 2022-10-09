@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj": {}
+    "C:\\Users\\andre\\source\\repos\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj": {}
   },
   "projects": {
-    "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj": {
+    "C:\\Users\\andre\\source\\repos\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
+        "projectUniqueName": "C:\\Users\\andre\\source\\repos\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
         "projectName": "SoftwareDesignProjectPaintJob",
-        "projectPath": "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
+        "projectPath": "C:\\Users\\andre\\source\\repos\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\SoftwareDesignProjectPaintJob.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\andre\\source\\repos\\avoss12\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\obj\\",
+        "outputPath": "C:\\Users\\andre\\source\\repos\\SoftwareDesignPaintJob-Attempt2\\SoftwareDesignProjectPaintJob\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
