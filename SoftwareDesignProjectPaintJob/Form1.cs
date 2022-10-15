@@ -49,8 +49,29 @@ namespace SoftwareDesignProjectPaintJob
             decimal itemRate = Convert.ToDecimal(txtItemRate.Text);   
             decimal itemSF = itemLength * itemWidthHeight;
 
+            decimal itemLength1 = Convert.ToDecimal(txtItemLength1.Text);
+            decimal itemWidthHeight1 = Convert.ToDecimal(txtItemWidthHeight1.Text);
+            decimal itemRate1 = Convert.ToDecimal(txtItemRate1.Text);
+            decimal itemSF1 = itemLength1 * itemWidthHeight1;
+
+            decimal itemLength2 = Convert.ToDecimal(txtItemLength2.Text);
+            decimal itemWidthHeight2 = Convert.ToDecimal(txtItemWidthHeight2.Text);
+            decimal itemRate2 = Convert.ToDecimal(txtItemRate2.Text);
+            decimal itemSF2 = itemLength2 * itemWidthHeight2;
+
             txtItemSF.Text = Convert.ToString(itemSF);
+            txtItemSF1.Text = Convert.ToString(itemSF1);
+            txtItemSF2.Text = Convert.ToString(itemSF2);
             txtRoomName.Text = itemNameList.Text;
+
+            decimal itemEstTotal1 = itemSF1 * itemRate1;
+            txtInterfaceEstimate1.Text = Convert.ToString(itemEstTotal1);
+
+            decimal itemEstTotal2 = itemSF2 * itemRate2;
+            txtInterfaceEstimate2.Text = Convert.ToString(itemEstTotal2);
+
+            decimal estimateTotal = itemEstTotal1 + itemEstTotal2;
+            txtEstimateTotal.Text = Convert.ToString(estimateTotal);
 
             Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
 
@@ -182,5 +203,48 @@ namespace SoftwareDesignProjectPaintJob
 
             }
 
+        private void txtRoomName_TextChanged(object sender, EventArgs e)
+        {
+
         }
+
+        private void txtItemLength_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemPaintColor_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemWidthHeight_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemSF1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtInterfaceEstimate1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+    internal class item_class1
+    {
+    }
 }
