@@ -53,24 +53,40 @@ namespace SoftwareDesignProjectPaintJob
             decimal itemWidthHeight1 = Convert.ToDecimal(txtItemWidthHeight1.Text);
             decimal itemRate1 = Convert.ToDecimal(txtItemRate1.Text);
             decimal itemSF1 = itemLength1 * itemWidthHeight1;
+            decimal itemEstTotal1 = itemSF1 * itemRate1;
+            txtInterfaceEstimate1.Text = Convert.ToString(itemEstTotal1);
 
             decimal itemLength2 = Convert.ToDecimal(txtItemLength2.Text);
             decimal itemWidthHeight2 = Convert.ToDecimal(txtItemWidthHeight2.Text);
             decimal itemRate2 = Convert.ToDecimal(txtItemRate2.Text);
             decimal itemSF2 = itemLength2 * itemWidthHeight2;
+            decimal itemEstTotal2 = itemSF2 * itemRate2;
+            txtInterfaceEstimate2.Text = Convert.ToString(itemEstTotal2);
+
+            decimal itemLength3 = Convert.ToDecimal(txtItemLength3.Text);
+            decimal itemWidthHeight3 = Convert.ToDecimal(txtItemWidthHeight3.Text);
+            decimal itemRate3 = Convert.ToDecimal(txtItemRate3.Text);
+            decimal itemSF3 = itemLength3 * itemWidthHeight3;
+            decimal itemEstTotal3 = itemSF3 * itemRate3;
+            txtInterfaceEstimate3.Text = Convert.ToString(itemEstTotal3);
+
+            decimal itemLength4 = Convert.ToDecimal(txtItemLength4.Text);
+            decimal itemRate4 = Convert.ToDecimal(txtItemRate4.Text);
+            decimal itemEstTotal4 = itemLength4 * itemRate4;
+            txtInterfaceEstimate4.Text = Convert.ToString(itemEstTotal4);
+
+            decimal itemLength5 = Convert.ToDecimal(txtItemLength5.Text);
+            decimal itemRate5 = Convert.ToDecimal(txtItemRate5.Text);
+            decimal itemEstTotal5 = itemLength5 * itemRate5;
+            txtInterfaceEstimate5.Text = Convert.ToString(itemEstTotal5);
 
             txtItemSF.Text = Convert.ToString(itemSF);
             txtItemSF1.Text = Convert.ToString(itemSF1);
             txtItemSF2.Text = Convert.ToString(itemSF2);
+            txtItemSF3.Text = Convert.ToString(itemSF3);
             txtRoomName.Text = itemNameList.Text;
-
-            decimal itemEstTotal1 = itemSF1 * itemRate1;
-            txtInterfaceEstimate1.Text = Convert.ToString(itemEstTotal1);
-
-            decimal itemEstTotal2 = itemSF2 * itemRate2;
-            txtInterfaceEstimate2.Text = Convert.ToString(itemEstTotal2);
-
-            decimal estimateTotal = itemEstTotal1 + itemEstTotal2;
+                
+            decimal estimateTotal = itemEstTotal1 + itemEstTotal2 + itemEstTotal3 + itemEstTotal4 + itemEstTotal5;
             txtEstimateTotal.Text = Convert.ToString(estimateTotal);
 
             Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
@@ -239,6 +255,26 @@ namespace SoftwareDesignProjectPaintJob
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemLength4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtItemLength5_TextChanged(object sender, EventArgs e)
         {
 
         }
