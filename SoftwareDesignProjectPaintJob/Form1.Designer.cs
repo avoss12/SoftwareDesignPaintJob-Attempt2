@@ -99,6 +99,8 @@
             this.txtInterfaceEstimate3 = new System.Windows.Forms.TextBox();
             this.txtInterfaceEstimate4 = new System.Windows.Forms.TextBox();
             this.txtInterfaceEstimate5 = new System.Windows.Forms.TextBox();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnClicktoCalculate
@@ -124,6 +126,7 @@
             // 
             // txtItemLength
             // 
+            this.txtItemLength.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemLength.Location = new System.Drawing.Point(328, 111);
             this.txtItemLength.Name = "txtItemLength";
             this.txtItemLength.Size = new System.Drawing.Size(100, 23);
@@ -132,10 +135,11 @@
             // 
             // txtItemWidthHeight
             // 
+            this.txtItemWidthHeight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemWidthHeight.Location = new System.Drawing.Point(475, 111);
             this.txtItemWidthHeight.Name = "txtItemWidthHeight";
             this.txtItemWidthHeight.Size = new System.Drawing.Size(100, 23);
-            this.txtItemWidthHeight.TabIndex = 4;
+            this.txtItemWidthHeight.TabIndex = 3;
             this.txtItemWidthHeight.TextChanged += new System.EventHandler(this.txtItemWidthHeight_TextChanged);
             // 
             // lblItemWidthHeight
@@ -153,7 +157,7 @@
             this.txtItemSF.Location = new System.Drawing.Point(769, 112);
             this.txtItemSF.Name = "txtItemSF";
             this.txtItemSF.Size = new System.Drawing.Size(100, 23);
-            this.txtItemSF.TabIndex = 6;
+            this.txtItemSF.TabIndex = 46;
             this.txtItemSF.TextChanged += new System.EventHandler(this.txtCeilingSF_TextChanged);
             // 
             // lblItemSF
@@ -169,10 +173,11 @@
             // 
             // txtItemRate
             // 
+            this.txtItemRate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemRate.Location = new System.Drawing.Point(636, 112);
             this.txtItemRate.Name = "txtItemRate";
             this.txtItemRate.Size = new System.Drawing.Size(100, 23);
-            this.txtItemRate.TabIndex = 8;
+            this.txtItemRate.TabIndex = 4;
             this.txtItemRate.TextChanged += new System.EventHandler(this.txtCeilingRate_TextChanged);
             // 
             // lblItemRate
@@ -226,10 +231,11 @@
             // 
             // txtItemPaintColor
             // 
+            this.txtItemPaintColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemPaintColor.Location = new System.Drawing.Point(201, 111);
             this.txtItemPaintColor.Name = "txtItemPaintColor";
             this.txtItemPaintColor.Size = new System.Drawing.Size(100, 23);
-            this.txtItemPaintColor.TabIndex = 15;
+            this.txtItemPaintColor.TabIndex = 1;
             this.txtItemPaintColor.TextChanged += new System.EventHandler(this.txtItemPaintColor_TextChanged);
             // 
             // lblItemPaintColor
@@ -258,7 +264,7 @@
             this.itemNameList.Margin = new System.Windows.Forms.Padding(2);
             this.itemNameList.Name = "itemNameList";
             this.itemNameList.Size = new System.Drawing.Size(127, 49);
-            this.itemNameList.TabIndex = 16;
+            this.itemNameList.TabIndex = 46;
             this.itemNameList.SelectedIndexChanged += new System.EventHandler(this.roomNameList_SelectedIndexChanged);
             // 
             // lblSelectItemList
@@ -278,7 +284,7 @@
             this.txtThisType.Margin = new System.Windows.Forms.Padding(2);
             this.txtThisType.Name = "txtThisType";
             this.txtThisType.Size = new System.Drawing.Size(106, 23);
-            this.txtThisType.TabIndex = 18;
+            this.txtThisType.TabIndex = 52;
             this.txtThisType.TextChanged += new System.EventHandler(this.txtThisType_TextChanged);
             // 
             // lblReflectionClassType
@@ -299,7 +305,7 @@
             this.txtInterfaceEstimate.Margin = new System.Windows.Forms.Padding(2);
             this.txtInterfaceEstimate.Name = "txtInterfaceEstimate";
             this.txtInterfaceEstimate.Size = new System.Drawing.Size(106, 23);
-            this.txtInterfaceEstimate.TabIndex = 20;
+            this.txtInterfaceEstimate.TabIndex = 42;
             this.txtInterfaceEstimate.TextChanged += new System.EventHandler(this.txtInterfaceEstimate_TextChanged);
             // 
             // txtApiReturnID
@@ -307,7 +313,7 @@
             this.txtApiReturnID.Location = new System.Drawing.Point(149, 548);
             this.txtApiReturnID.Name = "txtApiReturnID";
             this.txtApiReturnID.Size = new System.Drawing.Size(204, 23);
-            this.txtApiReturnID.TabIndex = 21;
+            this.txtApiReturnID.TabIndex = 23;
             this.txtApiReturnID.TextChanged += new System.EventHandler(this.txtApiReturnID_TextChanged);
             // 
             // lblApiReturnID
@@ -334,32 +340,37 @@
             // 
             // txtItemPaintColor1
             // 
-            this.txtItemPaintColor1.Location = new System.Drawing.Point(201, 162);
+            this.txtItemPaintColor1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.txtItemPaintColor1.Location = new System.Drawing.Point(202, 162);
             this.txtItemPaintColor1.Name = "txtItemPaintColor1";
             this.txtItemPaintColor1.Size = new System.Drawing.Size(100, 23);
-            this.txtItemPaintColor1.TabIndex = 24;
+            this.txtItemPaintColor1.TabIndex = 5;
             this.txtItemPaintColor1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // txtItemLength1
             // 
+            this.txtItemLength1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemLength1.Location = new System.Drawing.Point(328, 162);
             this.txtItemLength1.Name = "txtItemLength1";
             this.txtItemLength1.Size = new System.Drawing.Size(100, 23);
-            this.txtItemLength1.TabIndex = 25;
+            this.txtItemLength1.TabIndex = 6;
             // 
             // txtItemWidthHeight1
             // 
+            this.txtItemWidthHeight1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemWidthHeight1.Location = new System.Drawing.Point(475, 163);
             this.txtItemWidthHeight1.Name = "txtItemWidthHeight1";
             this.txtItemWidthHeight1.Size = new System.Drawing.Size(100, 23);
-            this.txtItemWidthHeight1.TabIndex = 26;
+            this.txtItemWidthHeight1.TabIndex = 7;
             // 
             // txtItemRate1
             // 
+            this.txtItemRate1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemRate1.Location = new System.Drawing.Point(636, 163);
             this.txtItemRate1.Name = "txtItemRate1";
             this.txtItemRate1.Size = new System.Drawing.Size(100, 23);
-            this.txtItemRate1.TabIndex = 27;
+            this.txtItemRate1.TabIndex = 8;
+            this.txtItemRate1.TextChanged += new System.EventHandler(this.txtItemRate1_TextChanged);
             // 
             // txtItemSF1
             // 
@@ -375,7 +386,7 @@
             this.txtInterfaceEstimate1.Margin = new System.Windows.Forms.Padding(2);
             this.txtInterfaceEstimate1.Name = "txtInterfaceEstimate1";
             this.txtInterfaceEstimate1.Size = new System.Drawing.Size(106, 23);
-            this.txtInterfaceEstimate1.TabIndex = 29;
+            this.txtInterfaceEstimate1.TabIndex = 42;
             this.txtInterfaceEstimate1.TextChanged += new System.EventHandler(this.txtInterfaceEstimate1_TextChanged);
             // 
             // txtThisType1
@@ -384,7 +395,7 @@
             this.txtThisType1.Margin = new System.Windows.Forms.Padding(2);
             this.txtThisType1.Name = "txtThisType1";
             this.txtThisType1.Size = new System.Drawing.Size(106, 23);
-            this.txtThisType1.TabIndex = 30;
+            this.txtThisType1.TabIndex = 52;
             // 
             // lblItemToPaint
             // 
@@ -484,31 +495,35 @@
             // 
             // txtItemPaintColor2
             // 
+            this.txtItemPaintColor2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemPaintColor2.Location = new System.Drawing.Point(201, 209);
             this.txtItemPaintColor2.Name = "txtItemPaintColor2";
             this.txtItemPaintColor2.Size = new System.Drawing.Size(100, 23);
-            this.txtItemPaintColor2.TabIndex = 41;
+            this.txtItemPaintColor2.TabIndex = 9;
             // 
             // txtItemLength2
             // 
+            this.txtItemLength2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemLength2.Location = new System.Drawing.Point(326, 209);
             this.txtItemLength2.Name = "txtItemLength2";
             this.txtItemLength2.Size = new System.Drawing.Size(100, 23);
-            this.txtItemLength2.TabIndex = 42;
+            this.txtItemLength2.TabIndex = 10;
             // 
             // txtItemWidthHeight2
             // 
+            this.txtItemWidthHeight2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemWidthHeight2.Location = new System.Drawing.Point(475, 209);
             this.txtItemWidthHeight2.Name = "txtItemWidthHeight2";
             this.txtItemWidthHeight2.Size = new System.Drawing.Size(100, 23);
-            this.txtItemWidthHeight2.TabIndex = 43;
+            this.txtItemWidthHeight2.TabIndex = 11;
             // 
             // txtItemRate2
             // 
+            this.txtItemRate2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemRate2.Location = new System.Drawing.Point(636, 210);
             this.txtItemRate2.Name = "txtItemRate2";
             this.txtItemRate2.Size = new System.Drawing.Size(100, 23);
-            this.txtItemRate2.TabIndex = 44;
+            this.txtItemRate2.TabIndex = 12;
             // 
             // txtItemSF2
             // 
@@ -535,56 +550,63 @@
             // 
             // txtItemPaintColor3
             // 
+            this.txtItemPaintColor3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemPaintColor3.Location = new System.Drawing.Point(201, 260);
             this.txtItemPaintColor3.Name = "txtItemPaintColor3";
             this.txtItemPaintColor3.Size = new System.Drawing.Size(100, 23);
-            this.txtItemPaintColor3.TabIndex = 48;
+            this.txtItemPaintColor3.TabIndex = 13;
             // 
             // txtItemPaintColor4
             // 
+            this.txtItemPaintColor4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemPaintColor4.Location = new System.Drawing.Point(201, 302);
             this.txtItemPaintColor4.Name = "txtItemPaintColor4";
             this.txtItemPaintColor4.Size = new System.Drawing.Size(100, 23);
-            this.txtItemPaintColor4.TabIndex = 49;
+            this.txtItemPaintColor4.TabIndex = 17;
             // 
             // txtItemPaintColor5
             // 
+            this.txtItemPaintColor5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemPaintColor5.Location = new System.Drawing.Point(201, 346);
             this.txtItemPaintColor5.Name = "txtItemPaintColor5";
             this.txtItemPaintColor5.Size = new System.Drawing.Size(100, 23);
-            this.txtItemPaintColor5.TabIndex = 50;
+            this.txtItemPaintColor5.TabIndex = 20;
             this.txtItemPaintColor5.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtItemLength3
             // 
+            this.txtItemLength3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemLength3.Location = new System.Drawing.Point(326, 260);
             this.txtItemLength3.Name = "txtItemLength3";
             this.txtItemLength3.Size = new System.Drawing.Size(100, 23);
-            this.txtItemLength3.TabIndex = 51;
+            this.txtItemLength3.TabIndex = 14;
             this.txtItemLength3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtItemLength4
             // 
+            this.txtItemLength4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemLength4.Location = new System.Drawing.Point(326, 302);
             this.txtItemLength4.Name = "txtItemLength4";
             this.txtItemLength4.Size = new System.Drawing.Size(100, 23);
-            this.txtItemLength4.TabIndex = 52;
+            this.txtItemLength4.TabIndex = 18;
             this.txtItemLength4.TextChanged += new System.EventHandler(this.txtItemLength4_TextChanged);
             // 
             // txtItemLength5
             // 
+            this.txtItemLength5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemLength5.Location = new System.Drawing.Point(326, 346);
             this.txtItemLength5.Name = "txtItemLength5";
             this.txtItemLength5.Size = new System.Drawing.Size(100, 23);
-            this.txtItemLength5.TabIndex = 53;
+            this.txtItemLength5.TabIndex = 21;
             this.txtItemLength5.TextChanged += new System.EventHandler(this.txtItemLength5_TextChanged);
             // 
             // txtItemWidthHeight3
             // 
+            this.txtItemWidthHeight3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemWidthHeight3.Location = new System.Drawing.Point(475, 260);
             this.txtItemWidthHeight3.Name = "txtItemWidthHeight3";
             this.txtItemWidthHeight3.Size = new System.Drawing.Size(100, 23);
-            this.txtItemWidthHeight3.TabIndex = 54;
+            this.txtItemWidthHeight3.TabIndex = 15;
             // 
             // lblNumDoorSides
             // 
@@ -608,24 +630,27 @@
             // 
             // txtItemRate3
             // 
+            this.txtItemRate3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemRate3.Location = new System.Drawing.Point(636, 261);
             this.txtItemRate3.Name = "txtItemRate3";
             this.txtItemRate3.Size = new System.Drawing.Size(100, 23);
-            this.txtItemRate3.TabIndex = 57;
+            this.txtItemRate3.TabIndex = 16;
             // 
             // txtItemRate4
             // 
+            this.txtItemRate4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemRate4.Location = new System.Drawing.Point(636, 308);
             this.txtItemRate4.Name = "txtItemRate4";
             this.txtItemRate4.Size = new System.Drawing.Size(100, 23);
-            this.txtItemRate4.TabIndex = 58;
+            this.txtItemRate4.TabIndex = 19;
             // 
             // txtItemRate5
             // 
+            this.txtItemRate5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.txtItemRate5.Location = new System.Drawing.Point(636, 352);
             this.txtItemRate5.Name = "txtItemRate5";
             this.txtItemRate5.Size = new System.Drawing.Size(100, 23);
-            this.txtItemRate5.TabIndex = 59;
+            this.txtItemRate5.TabIndex = 22;
             // 
             // txtItemSF3
             // 
@@ -738,11 +763,27 @@
             this.txtInterfaceEstimate5.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate5.TabIndex = 71;
             // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnPrint.Location = new System.Drawing.Point(863, 482);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(170, 37);
+            this.btnPrint.TabIndex = 72;
+            this.btnPrint.Text = "Click to Print";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 630);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtInterfaceEstimate5);
             this.Controls.Add(this.txtInterfaceEstimate4);
             this.Controls.Add(this.txtInterfaceEstimate3);
@@ -896,5 +937,7 @@
         private TextBox txtInterfaceEstimate3;
         private TextBox txtInterfaceEstimate4;
         private TextBox txtInterfaceEstimate5;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private Button btnPrint;
     }
 }
