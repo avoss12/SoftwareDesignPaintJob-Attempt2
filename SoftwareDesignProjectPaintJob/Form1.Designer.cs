@@ -236,6 +236,7 @@
             this.txtItemPaintColor.Name = "txtItemPaintColor";
             this.txtItemPaintColor.Size = new System.Drawing.Size(100, 23);
             this.txtItemPaintColor.TabIndex = 1;
+            this.txtItemPaintColor.Text = "1";
             this.txtItemPaintColor.TextChanged += new System.EventHandler(this.txtItemPaintColor_TextChanged);
             // 
             // lblItemPaintColor
@@ -244,9 +245,9 @@
             this.lblItemPaintColor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblItemPaintColor.Location = new System.Drawing.Point(201, 67);
             this.lblItemPaintColor.Name = "lblItemPaintColor";
-            this.lblItemPaintColor.Size = new System.Drawing.Size(119, 18);
+            this.lblItemPaintColor.Size = new System.Drawing.Size(84, 18);
             this.lblItemPaintColor.TabIndex = 14;
-            this.lblItemPaintColor.Text = "Item Paint Color";
+            this.lblItemPaintColor.Text = "# of Colors";
             // 
             // itemNameList
             // 
