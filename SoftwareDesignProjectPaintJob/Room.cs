@@ -13,13 +13,13 @@ namespace SoftwareDesignProjectPaintJob
     public class Item
     {
         public string ItemName { get; set; }
-        public string ItemColor { get; set; }
+        public decimal ItemColor { get; set; }
         public decimal ItemLength { get; set; }
         public decimal ItemWidthHeight { get; set; }
         public decimal ItemSF { get; set; }
 
 
-        public Item(string inItemName, string inItemColor, decimal inItemLength, decimal inItemWidthHeight, decimal inItemSF)
+        public Item(string inItemName, decimal inItemColor, decimal inItemLength, decimal inItemWidthHeight, decimal inItemSF)
         {
             ItemName = inItemName;
             ItemColor = inItemColor;
@@ -33,7 +33,7 @@ namespace SoftwareDesignProjectPaintJob
 
     public class Ceilings : Item
     {
-        public Ceilings(string inItemName, string inItemColor, decimal inItemLength, decimal inItemWidthHeight, decimal inItemSF) : base(inItemName, inItemColor, inItemLength, inItemWidthHeight, inItemSF)
+        public Ceilings(string inItemName, decimal inItemColor, decimal inItemLength, decimal inItemWidthHeight, decimal inItemSF) : base(inItemName, inItemColor, inItemLength, inItemWidthHeight, inItemSF)
         {
         }
     }
@@ -41,7 +41,7 @@ namespace SoftwareDesignProjectPaintJob
     public class item_class : IItemEstInterface
     {
         public decimal itemEstTotal;
-        public void doCalc(decimal itemLength, decimal itemWidthHeight, decimal itemRate)
+        public void doCalc(decimal itemPaintColors, decimal itemLength, decimal itemWidthHeight, decimal itemRate)
         {
             decimal l, w, r;
             l = itemLength;

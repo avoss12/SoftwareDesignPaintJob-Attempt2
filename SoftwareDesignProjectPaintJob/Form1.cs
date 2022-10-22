@@ -93,19 +93,19 @@ namespace SoftwareDesignProjectPaintJob
             txtItemSF1.Text = Convert.ToString(itemSF1);
             txtItemSF2.Text = Convert.ToString(itemSF2);
             txtItemSF3.Text = Convert.ToString(itemSF3);
-            //txtRoomName.Text = itemNameList.Text;
+            txtRoomName.Text = itemNameList.Text;
 
-            //Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
+            Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
 
-            //Type thisType = newCeiling.GetType();
-            //txtThisType.Text = thisType.Name.ToString();
+            Type thisType = newCeiling.GetType();
+            txtThisType.Text = thisType.Name.ToString();
 
-            //item_class obj_item_iclass = new item_class();
-            //obj_item_iclass.doCalc(itemLength, itemWidthHeight, itemRate);
-            //txtInterfaceEstimate.Text = obj_item_iclass.itemEstTotal.ToString();      
-           
-            //decimal estimateTotal = obj_item_iclass.itemEstTotal + itemEstTotal1 + itemEstTotal2 + itemEstTotal3 + itemEstTotal4 + itemEstTotal5;
-            //txtEstimateTotal.Text = Convert.ToString(estimateTotal);
+            item_class obj_item_iclass = new item_class();
+            obj_item_iclass.doCalc(itemLength, itemWidthHeight, itemRate);
+            txtInterfaceEstimate.Text = obj_item_iclass.itemEstTotal.ToString();
+
+            decimal estimateTotal = obj_item_iclass.itemEstTotal + itemEstTotal1 + itemEstTotal2 + itemEstTotal3 + itemEstTotal4 + itemEstTotal5;
+            txtEstimateTotal.Text = Convert.ToString(estimateTotal);
 
 
 

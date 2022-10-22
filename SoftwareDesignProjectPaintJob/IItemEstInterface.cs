@@ -8,7 +8,7 @@ namespace SoftwareDesignProjectPaintJob
 {
     public interface IItemEstInterface
     {
-        void doCalc(decimal itemlength, decimal itemWidthHeight, decimal itemRate);
+        void doCalc(decimal itemRoomColors, decimal itemlength, decimal itemWidthHeight, decimal itemRate);
     }
 
     internal interface Interface1
