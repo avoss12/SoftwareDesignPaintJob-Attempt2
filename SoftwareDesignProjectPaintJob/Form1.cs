@@ -93,19 +93,19 @@ namespace SoftwareDesignProjectPaintJob
             txtItemSF1.Text = Convert.ToString(itemSF1);
             txtItemSF2.Text = Convert.ToString(itemSF2);
             txtItemSF3.Text = Convert.ToString(itemSF3);
-            txtRoomName.Text = itemNameList.Text;
-          
-            Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
+            //txtRoomName.Text = itemNameList.Text;
 
-            Type thisType = newCeiling.GetType();
-            txtThisType.Text = thisType.Name.ToString();
+            //Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
 
-            item_class obj_item_iclass = new item_class();
-            obj_item_iclass.doCalc(itemLength, itemWidthHeight, itemRate);
-            txtInterfaceEstimate.Text = obj_item_iclass.itemEstTotal.ToString();      
+            //Type thisType = newCeiling.GetType();
+            //txtThisType.Text = thisType.Name.ToString();
+
+            //item_class obj_item_iclass = new item_class();
+            //obj_item_iclass.doCalc(itemLength, itemWidthHeight, itemRate);
+            //txtInterfaceEstimate.Text = obj_item_iclass.itemEstTotal.ToString();      
            
-            decimal estimateTotal = obj_item_iclass.itemEstTotal + itemEstTotal1 + itemEstTotal2 + itemEstTotal3 + itemEstTotal4 + itemEstTotal5;
-            txtEstimateTotal.Text = Convert.ToString(estimateTotal);
+            //decimal estimateTotal = obj_item_iclass.itemEstTotal + itemEstTotal1 + itemEstTotal2 + itemEstTotal3 + itemEstTotal4 + itemEstTotal5;
+            //txtEstimateTotal.Text = Convert.ToString(estimateTotal);
 
 
 
@@ -247,7 +247,7 @@ namespace SoftwareDesignProjectPaintJob
 
         private void txtItemWidthHeight_TextChanged(object sender, EventArgs e)
         {
-
+             
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -312,6 +312,193 @@ namespace SoftwareDesignProjectPaintJob
         private void printPreviewDialog1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtItemLength_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsNumber(e.KeyChar))
+            e.Handled = true;
+        }
+
+        private void txtItemLength1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemLength2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemLength3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemLength4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemLength5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemWidthHeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemWidthHeight1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemWidthHeight2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemWidthHeight3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemRate1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemRate2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemRate3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemRate4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemRate5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemPaintColor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemPaintColor1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemPaintColor2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemPaintColor3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemPaintColor4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemPaintColor5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txtItemSF_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtItemSF1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtItemSF2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtItemSF3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtInterfaceEstimate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtInterfaceEstimate1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtInterfaceEstimate2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtInterfaceEstimate3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtInterfaceEstimate4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtInterfaceEstimate5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void txtEstimateTotal_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
     }
 

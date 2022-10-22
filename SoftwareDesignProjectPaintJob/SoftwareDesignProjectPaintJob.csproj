@@ -11,7 +11,6 @@
   <ItemGroup>
     <Compile Remove="Form2.cs" />
     <Compile Remove="Form2.Designer.cs" />
-    <Compile Remove="Program.cs" />
   </ItemGroup>
 
   <ItemGroup>

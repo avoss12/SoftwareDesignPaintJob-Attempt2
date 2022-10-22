@@ -40,12 +40,8 @@
             this.lblItemRate = new System.Windows.Forms.Label();
             this.lblItemEstTotal = new System.Windows.Forms.Label();
             this.lblPaintJobEstimator = new System.Windows.Forms.Label();
-            this.lblRoomName = new System.Windows.Forms.Label();
-            this.txtRoomName = new System.Windows.Forms.TextBox();
             this.txtItemPaintColor = new System.Windows.Forms.TextBox();
             this.lblItemPaintColor = new System.Windows.Forms.Label();
-            this.itemNameList = new System.Windows.Forms.ListBox();
-            this.lblSelectItemList = new System.Windows.Forms.Label();
             this.txtThisType = new System.Windows.Forms.TextBox();
             this.lblReflectionClassType = new System.Windows.Forms.Label();
             this.txtInterfaceEstimate = new System.Windows.Forms.TextBox();
@@ -60,7 +56,6 @@
             this.txtInterfaceEstimate1 = new System.Windows.Forms.TextBox();
             this.txtThisType1 = new System.Windows.Forms.TextBox();
             this.lblItemToPaint = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblItemToPaintCeilings = new System.Windows.Forms.Label();
             this.lblItemToPaintWalls = new System.Windows.Forms.Label();
             this.lblItemToPaintBaseboard = new System.Windows.Forms.Label();
@@ -135,6 +130,7 @@
             this.txtItemLength.Size = new System.Drawing.Size(100, 23);
             this.txtItemLength.TabIndex = 2;
             this.txtItemLength.TextChanged += new System.EventHandler(this.txtItemLength_TextChanged);
+            this.txtItemLength.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemLength_KeyPress);
             // 
             // txtItemWidthHeight
             // 
@@ -144,6 +140,7 @@
             this.txtItemWidthHeight.Size = new System.Drawing.Size(100, 23);
             this.txtItemWidthHeight.TabIndex = 3;
             this.txtItemWidthHeight.TextChanged += new System.EventHandler(this.txtItemWidthHeight_TextChanged);
+            this.txtItemWidthHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemWidthHeight_KeyPress);
             // 
             // lblItemWidthHeight
             // 
@@ -162,6 +159,7 @@
             this.txtItemSF.Size = new System.Drawing.Size(100, 23);
             this.txtItemSF.TabIndex = 46;
             this.txtItemSF.TextChanged += new System.EventHandler(this.txtCeilingSF_TextChanged);
+            this.txtItemSF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemSF_KeyPress);
             // 
             // lblItemSF
             // 
@@ -182,6 +180,7 @@
             this.txtItemRate.Size = new System.Drawing.Size(100, 23);
             this.txtItemRate.TabIndex = 4;
             this.txtItemRate.TextChanged += new System.EventHandler(this.txtCeilingRate_TextChanged);
+            this.txtItemRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemRate_KeyPress);
             // 
             // lblItemRate
             // 
@@ -214,24 +213,6 @@
             this.lblPaintJobEstimator.TabIndex = 11;
             this.lblPaintJobEstimator.Text = "Paint Job Estimator";
             // 
-            // lblRoomName
-            // 
-            this.lblRoomName.AutoSize = true;
-            this.lblRoomName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRoomName.Location = new System.Drawing.Point(863, 568);
-            this.lblRoomName.Name = "lblRoomName";
-            this.lblRoomName.Size = new System.Drawing.Size(96, 18);
-            this.lblRoomName.TabIndex = 12;
-            this.lblRoomName.Text = "Room Name";
-            // 
-            // txtRoomName
-            // 
-            this.txtRoomName.Location = new System.Drawing.Point(980, 564);
-            this.txtRoomName.Name = "txtRoomName";
-            this.txtRoomName.Size = new System.Drawing.Size(100, 23);
-            this.txtRoomName.TabIndex = 13;
-            this.txtRoomName.TextChanged += new System.EventHandler(this.txtRoomName_TextChanged);
-            // 
             // txtItemPaintColor
             // 
             this.txtItemPaintColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -240,6 +221,7 @@
             this.txtItemPaintColor.Size = new System.Drawing.Size(100, 23);
             this.txtItemPaintColor.TabIndex = 1;
             this.txtItemPaintColor.TextChanged += new System.EventHandler(this.txtItemPaintColor_TextChanged);
+            this.txtItemPaintColor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemPaintColor_KeyPress);
             // 
             // lblItemPaintColor
             // 
@@ -250,36 +232,6 @@
             this.lblItemPaintColor.Size = new System.Drawing.Size(84, 18);
             this.lblItemPaintColor.TabIndex = 14;
             this.lblItemPaintColor.Text = "# of Colors";
-            // 
-            // itemNameList
-            // 
-            this.itemNameList.AllowDrop = true;
-            this.itemNameList.FormattingEnabled = true;
-            this.itemNameList.ItemHeight = 15;
-            this.itemNameList.Items.AddRange(new object[] {
-            "Ceilings",
-            "Walls",
-            "Baseboard",
-            "Crown",
-            "Doors",
-            "Windows"});
-            this.itemNameList.Location = new System.Drawing.Point(1124, 498);
-            this.itemNameList.Margin = new System.Windows.Forms.Padding(2);
-            this.itemNameList.Name = "itemNameList";
-            this.itemNameList.Size = new System.Drawing.Size(127, 49);
-            this.itemNameList.TabIndex = 46;
-            this.itemNameList.SelectedIndexChanged += new System.EventHandler(this.roomNameList_SelectedIndexChanged);
-            // 
-            // lblSelectItemList
-            // 
-            this.lblSelectItemList.AutoSize = true;
-            this.lblSelectItemList.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSelectItemList.Location = new System.Drawing.Point(1126, 467);
-            this.lblSelectItemList.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblSelectItemList.Name = "lblSelectItemList";
-            this.lblSelectItemList.Size = new System.Drawing.Size(125, 18);
-            this.lblSelectItemList.TabIndex = 17;
-            this.lblSelectItemList.Text = "Select Paint Item\r\n";
             // 
             // txtThisType
             // 
@@ -310,6 +262,7 @@
             this.txtInterfaceEstimate.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate.TabIndex = 42;
             this.txtInterfaceEstimate.TextChanged += new System.EventHandler(this.txtInterfaceEstimate_TextChanged);
+            this.txtInterfaceEstimate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate_KeyPress);
             // 
             // txtApiReturnID
             // 
@@ -349,6 +302,7 @@
             this.txtItemPaintColor1.Size = new System.Drawing.Size(100, 23);
             this.txtItemPaintColor1.TabIndex = 5;
             this.txtItemPaintColor1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            this.txtItemPaintColor1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemPaintColor1_KeyPress);
             // 
             // txtItemLength1
             // 
@@ -357,6 +311,7 @@
             this.txtItemLength1.Name = "txtItemLength1";
             this.txtItemLength1.Size = new System.Drawing.Size(100, 23);
             this.txtItemLength1.TabIndex = 6;
+            this.txtItemLength1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemLength1_KeyPress);
             // 
             // txtItemWidthHeight1
             // 
@@ -365,6 +320,7 @@
             this.txtItemWidthHeight1.Name = "txtItemWidthHeight1";
             this.txtItemWidthHeight1.Size = new System.Drawing.Size(100, 23);
             this.txtItemWidthHeight1.TabIndex = 7;
+            this.txtItemWidthHeight1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemWidthHeight1_KeyPress);
             // 
             // txtItemRate1
             // 
@@ -374,6 +330,7 @@
             this.txtItemRate1.Size = new System.Drawing.Size(100, 23);
             this.txtItemRate1.TabIndex = 8;
             this.txtItemRate1.TextChanged += new System.EventHandler(this.txtItemRate1_TextChanged);
+            this.txtItemRate1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemRate1_KeyPress);
             // 
             // txtItemSF1
             // 
@@ -382,6 +339,7 @@
             this.txtItemSF1.Size = new System.Drawing.Size(100, 23);
             this.txtItemSF1.TabIndex = 28;
             this.txtItemSF1.TextChanged += new System.EventHandler(this.txtItemSF1_TextChanged);
+            this.txtItemSF1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemSF1_KeyPress);
             // 
             // txtInterfaceEstimate1
             // 
@@ -391,6 +349,7 @@
             this.txtInterfaceEstimate1.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate1.TabIndex = 42;
             this.txtInterfaceEstimate1.TextChanged += new System.EventHandler(this.txtInterfaceEstimate1_TextChanged);
+            this.txtInterfaceEstimate1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate1_KeyPress);
             // 
             // txtThisType1
             // 
@@ -409,13 +368,6 @@
             this.lblItemToPaint.Size = new System.Drawing.Size(94, 18);
             this.lblItemToPaint.TabIndex = 31;
             this.lblItemToPaint.Text = "Item to Paint";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(1124, 552);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 32;
             // 
             // lblItemToPaintCeilings
             // 
@@ -485,6 +437,7 @@
             this.txtEstimateTotal.Name = "txtEstimateTotal";
             this.txtEstimateTotal.Size = new System.Drawing.Size(106, 23);
             this.txtEstimateTotal.TabIndex = 39;
+            this.txtEstimateTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstimateTotal_KeyPress);
             // 
             // lblEstimateTotal
             // 
@@ -503,6 +456,7 @@
             this.txtItemPaintColor2.Name = "txtItemPaintColor2";
             this.txtItemPaintColor2.Size = new System.Drawing.Size(100, 23);
             this.txtItemPaintColor2.TabIndex = 9;
+            this.txtItemPaintColor2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemPaintColor2_KeyPress);
             // 
             // txtItemLength2
             // 
@@ -511,6 +465,7 @@
             this.txtItemLength2.Name = "txtItemLength2";
             this.txtItemLength2.Size = new System.Drawing.Size(100, 23);
             this.txtItemLength2.TabIndex = 10;
+            this.txtItemLength2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemLength2_KeyPress);
             // 
             // txtItemWidthHeight2
             // 
@@ -519,6 +474,7 @@
             this.txtItemWidthHeight2.Name = "txtItemWidthHeight2";
             this.txtItemWidthHeight2.Size = new System.Drawing.Size(100, 23);
             this.txtItemWidthHeight2.TabIndex = 11;
+            this.txtItemWidthHeight2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemWidthHeight2_KeyPress);
             // 
             // txtItemRate2
             // 
@@ -527,6 +483,7 @@
             this.txtItemRate2.Name = "txtItemRate2";
             this.txtItemRate2.Size = new System.Drawing.Size(100, 23);
             this.txtItemRate2.TabIndex = 12;
+            this.txtItemRate2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemRate2_KeyPress);
             // 
             // txtItemSF2
             // 
@@ -534,6 +491,7 @@
             this.txtItemSF2.Name = "txtItemSF2";
             this.txtItemSF2.Size = new System.Drawing.Size(100, 23);
             this.txtItemSF2.TabIndex = 45;
+            this.txtItemSF2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemSF2_KeyPress);
             // 
             // txtInterfaceEstimate2
             // 
@@ -542,6 +500,7 @@
             this.txtInterfaceEstimate2.Name = "txtInterfaceEstimate2";
             this.txtInterfaceEstimate2.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate2.TabIndex = 46;
+            this.txtInterfaceEstimate2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate2_KeyPress);
             // 
             // txtThisType2
             // 
@@ -558,6 +517,7 @@
             this.txtItemPaintColor3.Name = "txtItemPaintColor3";
             this.txtItemPaintColor3.Size = new System.Drawing.Size(100, 23);
             this.txtItemPaintColor3.TabIndex = 13;
+            this.txtItemPaintColor3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemPaintColor3_KeyPress);
             // 
             // txtItemPaintColor4
             // 
@@ -566,6 +526,7 @@
             this.txtItemPaintColor4.Name = "txtItemPaintColor4";
             this.txtItemPaintColor4.Size = new System.Drawing.Size(100, 23);
             this.txtItemPaintColor4.TabIndex = 17;
+            this.txtItemPaintColor4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemPaintColor4_KeyPress);
             // 
             // txtItemPaintColor5
             // 
@@ -575,6 +536,7 @@
             this.txtItemPaintColor5.Size = new System.Drawing.Size(100, 23);
             this.txtItemPaintColor5.TabIndex = 20;
             this.txtItemPaintColor5.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtItemPaintColor5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemPaintColor5_KeyPress);
             // 
             // txtItemLength3
             // 
@@ -584,6 +546,7 @@
             this.txtItemLength3.Size = new System.Drawing.Size(100, 23);
             this.txtItemLength3.TabIndex = 14;
             this.txtItemLength3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txtItemLength3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemLength3_KeyPress);
             // 
             // txtItemLength4
             // 
@@ -593,6 +556,7 @@
             this.txtItemLength4.Size = new System.Drawing.Size(100, 23);
             this.txtItemLength4.TabIndex = 18;
             this.txtItemLength4.TextChanged += new System.EventHandler(this.txtItemLength4_TextChanged);
+            this.txtItemLength4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemLength4_KeyPress);
             // 
             // txtItemLength5
             // 
@@ -602,6 +566,7 @@
             this.txtItemLength5.Size = new System.Drawing.Size(100, 23);
             this.txtItemLength5.TabIndex = 21;
             this.txtItemLength5.TextChanged += new System.EventHandler(this.txtItemLength5_TextChanged);
+            this.txtItemLength5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemLength5_KeyPress);
             // 
             // txtItemWidthHeight3
             // 
@@ -610,6 +575,7 @@
             this.txtItemWidthHeight3.Name = "txtItemWidthHeight3";
             this.txtItemWidthHeight3.Size = new System.Drawing.Size(100, 23);
             this.txtItemWidthHeight3.TabIndex = 15;
+            this.txtItemWidthHeight3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemWidthHeight3_KeyPress);
             // 
             // lblNumDoorSides
             // 
@@ -638,6 +604,7 @@
             this.txtItemRate3.Name = "txtItemRate3";
             this.txtItemRate3.Size = new System.Drawing.Size(100, 23);
             this.txtItemRate3.TabIndex = 16;
+            this.txtItemRate3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemRate3_KeyPress);
             // 
             // txtItemRate4
             // 
@@ -646,6 +613,7 @@
             this.txtItemRate4.Name = "txtItemRate4";
             this.txtItemRate4.Size = new System.Drawing.Size(100, 23);
             this.txtItemRate4.TabIndex = 19;
+            this.txtItemRate4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemRate4_KeyPress);
             // 
             // txtItemRate5
             // 
@@ -654,6 +622,7 @@
             this.txtItemRate5.Name = "txtItemRate5";
             this.txtItemRate5.Size = new System.Drawing.Size(100, 23);
             this.txtItemRate5.TabIndex = 22;
+            this.txtItemRate5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemRate5_KeyPress);
             // 
             // txtItemSF3
             // 
@@ -661,6 +630,7 @@
             this.txtItemSF3.Name = "txtItemSF3";
             this.txtItemSF3.Size = new System.Drawing.Size(100, 23);
             this.txtItemSF3.TabIndex = 60;
+            this.txtItemSF3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemSF3_KeyPress);
             // 
             // lblLengthFeet
             // 
@@ -749,6 +719,7 @@
             this.txtInterfaceEstimate3.Name = "txtInterfaceEstimate3";
             this.txtInterfaceEstimate3.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate3.TabIndex = 69;
+            this.txtInterfaceEstimate3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate3_KeyPress);
             // 
             // txtInterfaceEstimate4
             // 
@@ -757,6 +728,7 @@
             this.txtInterfaceEstimate4.Name = "txtInterfaceEstimate4";
             this.txtInterfaceEstimate4.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate4.TabIndex = 70;
+            this.txtInterfaceEstimate4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate4_KeyPress);
             // 
             // txtInterfaceEstimate5
             // 
@@ -765,6 +737,7 @@
             this.txtInterfaceEstimate5.Name = "txtInterfaceEstimate5";
             this.txtInterfaceEstimate5.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate5.TabIndex = 71;
+            this.txtInterfaceEstimate5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate5_KeyPress);
             // 
             // printDocument1
             // 
@@ -849,7 +822,6 @@
             this.Controls.Add(this.lblItemToPaintBaseboard);
             this.Controls.Add(this.lblItemToPaintWalls);
             this.Controls.Add(this.lblItemToPaintCeilings);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblItemToPaint);
             this.Controls.Add(this.txtThisType1);
             this.Controls.Add(this.txtInterfaceEstimate1);
@@ -864,12 +836,8 @@
             this.Controls.Add(this.txtInterfaceEstimate);
             this.Controls.Add(this.lblReflectionClassType);
             this.Controls.Add(this.txtThisType);
-            this.Controls.Add(this.lblSelectItemList);
-            this.Controls.Add(this.itemNameList);
             this.Controls.Add(this.txtItemPaintColor);
             this.Controls.Add(this.lblItemPaintColor);
-            this.Controls.Add(this.txtRoomName);
-            this.Controls.Add(this.lblRoomName);
             this.Controls.Add(this.lblPaintJobEstimator);
             this.Controls.Add(this.lblItemEstTotal);
             this.Controls.Add(this.txtItemRate);
@@ -902,12 +870,8 @@
         private Label lblItemRate;
         private Label lblItemEstTotal;
         private Label lblPaintJobEstimator;
-        private Label lblRoomName;
-        private TextBox txtRoomName;
         private TextBox txtItemPaintColor;
         private Label lblItemPaintColor;
-        private ListBox itemNameList;
-        private Label lblSelectItemList;
         private TextBox txtThisType;
         private Label lblReflectionClassType;
         private TextBox txtInterfaceEstimate;
@@ -923,7 +887,6 @@
         private TextBox txtInterfaceEstimate1;
         private TextBox txtThisType1;
         private Label lblItemToPaint;
-        private TextBox textBox1;
         private Label lblItemToPaintCeilings;
         private Label lblItemToPaintWalls;
         private Label lblItemToPaintBaseboard;
