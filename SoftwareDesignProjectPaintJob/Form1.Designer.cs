@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnClicktoCalculate = new System.Windows.Forms.Button();
             this.lblItemLength = new System.Windows.Forms.Label();
             this.txtItemLength = new System.Windows.Forms.TextBox();
@@ -101,6 +102,8 @@
             this.txtInterfaceEstimate5 = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.SuspendLayout();
             // 
             // btnClicktoCalculate
@@ -236,7 +239,6 @@
             this.txtItemPaintColor.Name = "txtItemPaintColor";
             this.txtItemPaintColor.Size = new System.Drawing.Size(100, 23);
             this.txtItemPaintColor.TabIndex = 1;
-            this.txtItemPaintColor.Text = "1";
             this.txtItemPaintColor.TextChanged += new System.EventHandler(this.txtItemPaintColor_TextChanged);
             // 
             // lblItemPaintColor
@@ -779,11 +781,34 @@
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.Location = new System.Drawing.Point(89, 19);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(213, 26);
+            this.textBox2.TabIndex = 73;
+            this.textBox2.Text = "* Complete Colored Boxes ONLY!";
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            this.printPreviewDialog1.Load += new System.EventHandler(this.printPreviewDialog1_Load);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 630);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtInterfaceEstimate5);
             this.Controls.Add(this.txtInterfaceEstimate4);
@@ -940,5 +965,7 @@
         private TextBox txtInterfaceEstimate5;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private Button btnPrint;
+        private TextBox textBox2;
+        private PrintPreviewDialog printPreviewDialog1;
     }
 }
