@@ -43,7 +43,8 @@ namespace SoftwareDesignProjectPaintJob
         public decimal itemEstTotal;
         public void doCalc(decimal itemPaintColors, decimal itemLength, decimal itemWidthHeight, decimal itemRate)
         {
-            decimal l, w, r;
+            decimal p, l, w, r;
+            p = itemPaintColors;
             l = itemLength;
             w = itemWidthHeight;
             r = itemRate;

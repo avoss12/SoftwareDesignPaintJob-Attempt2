@@ -53,10 +53,25 @@ namespace SoftwareDesignProjectPaintJob
 
         private void btnClicktoCalculate_Click(object sender, EventArgs e)
         {
-            decimal itemLength = Convert.ToDecimal(txtItemLength.Text);
-            decimal itemWidthHeight = Convert.ToDecimal(txtItemWidthHeight.Text);
-            decimal itemRate = Convert.ToDecimal(txtItemRate.Text);   
-            decimal itemSF = itemLength * itemWidthHeight;
+            decimal itemSF = 0;
+            if (txtItemLength.Text != "")
+            {
+                decimal itemLength = Convert.ToDecimal(txtItemLength.Text);
+                decimal itemWidthHeight = Convert.ToDecimal(txtItemWidthHeight.Text);
+                decimal itemRate = Convert.ToDecimal(txtItemRate.Text);
+                itemSF = itemLength * itemWidthHeight;
+                decimal itemPaintColors = Convert.ToDecimal(txtItemPaintColor.Text);
+
+                RoomType newCeiling = new RoomType("Ceiling", itemPaintColors, itemLength, itemWidthHeight, itemSF);
+                item_class obj_item_iclass = new item_class();
+                obj_item_iclass.doCalc(itemPaintColors, itemLength, itemWidthHeight, itemRate);
+
+                txtInterfaceEstimate.Text = obj_item_iclass.itemEstTotal.ToString();
+            }
+            else
+            {
+                txtInterfaceEstimate.Text = "0";
+            }
 
             decimal itemLength1 = Convert.ToDecimal(txtItemLength1.Text);
             decimal itemWidthHeight1 = Convert.ToDecimal(txtItemWidthHeight1.Text);
@@ -92,18 +107,7 @@ namespace SoftwareDesignProjectPaintJob
             txtItemSF.Text = Convert.ToString(itemSF);
             txtItemSF1.Text = Convert.ToString(itemSF1);
             txtItemSF2.Text = Convert.ToString(itemSF2);
-            txtItemSF3.Text = Convert.ToString(itemSF3);
-            txtRoomName.Text = itemNameList.Text;
-
-            Ceilings newCeiling = new Ceilings(itemNameList.Text, txtItemPaintColor.Text, itemLength, itemWidthHeight, itemSF);
-
-            Type thisType = newCeiling.GetType();
-            txtThisType.Text = thisType.Name.ToString();
-
-            item_class obj_item_iclass = new item_class();
-            obj_item_iclass.doCalc(itemLength, itemWidthHeight, itemRate);
-            txtInterfaceEstimate.Text = obj_item_iclass.itemEstTotal.ToString();
-
+            txtItemSF3.Text = Convert.ToString(itemSF3);           
             decimal estimateTotal = obj_item_iclass.itemEstTotal + itemEstTotal1 + itemEstTotal2 + itemEstTotal3 + itemEstTotal4 + itemEstTotal5;
             txtEstimateTotal.Text = Convert.ToString(estimateTotal);
 
