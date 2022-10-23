@@ -42,8 +42,6 @@
             this.lblPaintJobEstimator = new System.Windows.Forms.Label();
             this.txtItemPaintColor = new System.Windows.Forms.TextBox();
             this.lblItemPaintColor = new System.Windows.Forms.Label();
-            this.txtThisType = new System.Windows.Forms.TextBox();
-            this.lblReflectionClassType = new System.Windows.Forms.Label();
             this.txtInterfaceEstimate = new System.Windows.Forms.TextBox();
             this.txtApiReturnID = new System.Windows.Forms.TextBox();
             this.lblApiReturnID = new System.Windows.Forms.Label();
@@ -54,7 +52,6 @@
             this.txtItemRate1 = new System.Windows.Forms.TextBox();
             this.txtItemSF1 = new System.Windows.Forms.TextBox();
             this.txtInterfaceEstimate1 = new System.Windows.Forms.TextBox();
-            this.txtThisType1 = new System.Windows.Forms.TextBox();
             this.lblItemToPaint = new System.Windows.Forms.Label();
             this.lblItemToPaintCeilings = new System.Windows.Forms.Label();
             this.lblItemToPaintWalls = new System.Windows.Forms.Label();
@@ -70,7 +67,6 @@
             this.txtItemRate2 = new System.Windows.Forms.TextBox();
             this.txtItemSF2 = new System.Windows.Forms.TextBox();
             this.txtInterfaceEstimate2 = new System.Windows.Forms.TextBox();
-            this.txtThisType2 = new System.Windows.Forms.TextBox();
             this.txtItemPaintColor3 = new System.Windows.Forms.TextBox();
             this.txtItemPaintColor4 = new System.Windows.Forms.TextBox();
             this.txtItemPaintColor5 = new System.Windows.Forms.TextBox();
@@ -97,7 +93,6 @@
             this.txtInterfaceEstimate5 = new System.Windows.Forms.TextBox();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.btnPrint = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.SuspendLayout();
             // 
@@ -233,27 +228,6 @@
             this.lblItemPaintColor.TabIndex = 14;
             this.lblItemPaintColor.Text = "# of Colors";
             // 
-            // txtThisType
-            // 
-            this.txtThisType.Location = new System.Drawing.Point(1170, 111);
-            this.txtThisType.Margin = new System.Windows.Forms.Padding(2);
-            this.txtThisType.Name = "txtThisType";
-            this.txtThisType.Size = new System.Drawing.Size(106, 23);
-            this.txtThisType.TabIndex = 52;
-            this.txtThisType.TextChanged += new System.EventHandler(this.txtThisType_TextChanged);
-            // 
-            // lblReflectionClassType
-            // 
-            this.lblReflectionClassType.AutoSize = true;
-            this.lblReflectionClassType.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblReflectionClassType.Location = new System.Drawing.Point(1170, 68);
-            this.lblReflectionClassType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblReflectionClassType.Name = "lblReflectionClassType";
-            this.lblReflectionClassType.Size = new System.Drawing.Size(97, 17);
-            this.lblReflectionClassType.TabIndex = 19;
-            this.lblReflectionClassType.Text = "Item Selected";
-            this.lblReflectionClassType.Click += new System.EventHandler(this.lblReflectionClassType_Click);
-            // 
             // txtInterfaceEstimate
             // 
             this.txtInterfaceEstimate.Location = new System.Drawing.Point(927, 112);
@@ -349,14 +323,6 @@
             this.txtInterfaceEstimate1.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate1.TabIndex = 42;
             this.txtInterfaceEstimate1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate1_KeyPress);
-            // 
-            // txtThisType1
-            // 
-            this.txtThisType1.Location = new System.Drawing.Point(1170, 162);
-            this.txtThisType1.Margin = new System.Windows.Forms.Padding(2);
-            this.txtThisType1.Name = "txtThisType1";
-            this.txtThisType1.Size = new System.Drawing.Size(106, 23);
-            this.txtThisType1.TabIndex = 52;
             // 
             // lblItemToPaint
             // 
@@ -500,14 +466,6 @@
             this.txtInterfaceEstimate2.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate2.TabIndex = 46;
             this.txtInterfaceEstimate2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate2_KeyPress);
-            // 
-            // txtThisType2
-            // 
-            this.txtThisType2.Location = new System.Drawing.Point(1170, 209);
-            this.txtThisType2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtThisType2.Name = "txtThisType2";
-            this.txtThisType2.Size = new System.Drawing.Size(106, 23);
-            this.txtThisType2.TabIndex = 47;
             // 
             // txtItemPaintColor3
             // 
@@ -753,16 +711,6 @@
             this.btnPrint.UseVisualStyleBackColor = true;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.textBox2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(89, 19);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(213, 26);
-            this.textBox2.TabIndex = 73;
-            this.textBox2.Text = "* Complete Colored Boxes ONLY!";
-            // 
             // printPreviewDialog1
             // 
             this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
@@ -780,7 +728,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1327, 630);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.txtInterfaceEstimate5);
             this.Controls.Add(this.txtInterfaceEstimate4);
@@ -806,7 +753,6 @@
             this.Controls.Add(this.txtItemPaintColor5);
             this.Controls.Add(this.txtItemPaintColor4);
             this.Controls.Add(this.txtItemPaintColor3);
-            this.Controls.Add(this.txtThisType2);
             this.Controls.Add(this.txtInterfaceEstimate2);
             this.Controls.Add(this.txtItemSF2);
             this.Controls.Add(this.txtItemRate2);
@@ -822,7 +768,6 @@
             this.Controls.Add(this.lblItemToPaintWalls);
             this.Controls.Add(this.lblItemToPaintCeilings);
             this.Controls.Add(this.lblItemToPaint);
-            this.Controls.Add(this.txtThisType1);
             this.Controls.Add(this.txtInterfaceEstimate1);
             this.Controls.Add(this.txtItemSF1);
             this.Controls.Add(this.txtItemRate1);
@@ -833,8 +778,6 @@
             this.Controls.Add(this.lblApiReturnID);
             this.Controls.Add(this.txtApiReturnID);
             this.Controls.Add(this.txtInterfaceEstimate);
-            this.Controls.Add(this.lblReflectionClassType);
-            this.Controls.Add(this.txtThisType);
             this.Controls.Add(this.txtItemPaintColor);
             this.Controls.Add(this.lblItemPaintColor);
             this.Controls.Add(this.lblPaintJobEstimator);
@@ -884,7 +827,6 @@
         private TextBox txtItemRate1;
         private TextBox txtItemSF1;
         private TextBox txtInterfaceEstimate1;
-        private TextBox txtThisType1;
         private Label lblItemToPaint;
         private Label lblItemToPaintCeilings;
         private Label lblItemToPaintWalls;
@@ -900,7 +842,6 @@
         private TextBox txtItemRate2;
         private TextBox txtItemSF2;
         private TextBox txtInterfaceEstimate2;
-        private TextBox txtThisType2;
         private TextBox txtItemPaintColor3;
         private TextBox txtItemPaintColor4;
         private TextBox txtItemPaintColor5;

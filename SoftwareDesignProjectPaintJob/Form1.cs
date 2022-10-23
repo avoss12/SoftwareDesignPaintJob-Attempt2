@@ -214,20 +214,20 @@ namespace SoftwareDesignProjectPaintJob
 
         }
 
-        private void txtThisType_TextChanged(object sender, EventArgs e)
-        {
+        //private void txtThisType_TextChanged(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void txtInterfaceEstimate_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void lblReflectionClassType_Click(object sender, EventArgs e)
-        {
+        //private void lblReflectionClassType_Click(object sender, EventArgs e)
+        //{
 
-        }
+        //}
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -727,6 +727,21 @@ namespace SoftwareDesignProjectPaintJob
         {
             e.Handled = true;
         }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void txtThisType2_TextChanged(object sender, EventArgs e)
+        //{
+
+        //}
+
+        //private void txtThisType1_TextChanged(object sender, EventArgs e)
+        //{
+
+        //}
     }
 
     internal class item_class1
