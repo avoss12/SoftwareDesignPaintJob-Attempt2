@@ -348,7 +348,6 @@
             this.txtInterfaceEstimate1.Name = "txtInterfaceEstimate1";
             this.txtInterfaceEstimate1.Size = new System.Drawing.Size(106, 23);
             this.txtInterfaceEstimate1.TabIndex = 42;
-            this.txtInterfaceEstimate1.TextChanged += new System.EventHandler(this.txtInterfaceEstimate1_TextChanged);
             this.txtInterfaceEstimate1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtInterfaceEstimate1_KeyPress);
             // 
             // txtThisType1

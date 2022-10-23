@@ -166,11 +166,11 @@ namespace SoftwareDesignProjectPaintJob
                 item_class obj_item_iclass = new item_class();
                 obj_item_iclass.doCalc(itemPaintColors5, itemLength5, 1, itemRate5);
 
-                txtInterfaceEstimate4.Text = obj_item_iclass.itemEstTotal.ToString();
+                txtInterfaceEstimate5.Text = obj_item_iclass.itemEstTotal.ToString();
             }
             else
             {
-                txtInterfaceEstimate4.Text = "0";
+                txtInterfaceEstimate5.Text = "0";
             }
             txtItemSF.Text = Convert.ToString(itemSF);
             txtItemSF1.Text = Convert.ToString(itemSF1);
@@ -186,7 +186,7 @@ namespace SoftwareDesignProjectPaintJob
             decimal windowsEstTotal = Convert.ToDecimal(txtInterfaceEstimate4.Text);
 
 
-            decimal estimateTotal = ceilingEstTotal + wallsEstTotal + baseboardsEstTotal + doorsEstTotal + doorsEstTotal + windowsEstTotal;
+            decimal estimateTotal = ceilingEstTotal + wallsEstTotal + baseboardsEstTotal + crownEstTotal + doorsEstTotal + windowsEstTotal;
             txtEstimateTotal.Text = Convert.ToString(estimateTotal);
 
 
@@ -398,134 +398,231 @@ namespace SoftwareDesignProjectPaintJob
 
         private void txtItemLength_KeyPress(object sender, KeyPressEventArgs e)
         {
-        //    if(!char.IsNumber(e.KeyChar))
-        //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemLength1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
-        }
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+            {
 
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+            }
+        }
         private void txtItemLength2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
-        }
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+            {
 
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+            }
+        }
         private void txtItemLength3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
-        }
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+            {
 
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+            }
+        }
         private void txtItemLength4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
-        }
+            {
+                if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+                {
 
+                    e.Handled = true;
+
+                    MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+                }
+            }
         private void txtItemLength5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
-        }
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+            {
 
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+            }
+        }
         private void txtItemWidthHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemWidthHeight1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemWidthHeight2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemWidthHeight3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemRate_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemRate1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemRate2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemRate3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemRate4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemRate5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar) || char.IsPunctuation(e.KeyChar)))
+
+            {
+
+                e.Handled = true;
+
+                MessageBox.Show("Enter only digit and decimal point.", "Alert!");
+
+            }
         }
 
         private void txtItemPaintColor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
         }
 
         private void txtItemPaintColor1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
         }
 
         private void txtItemPaintColor2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
         }
 
         private void txtItemPaintColor3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
         }
 
         private void txtItemPaintColor4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
         }
 
         private void txtItemPaintColor5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //if (!char.IsNumber(e.KeyChar))
-            //    e.Handled = true;
+            if (!char.IsNumber(e.KeyChar))
+                e.Handled = true;
         }
 
         private void txtItemSF_KeyPress(object sender, KeyPressEventArgs e)
