@@ -89,6 +89,8 @@ namespace SoftwareDesignProjectPaintJob
                 RoomType newWalls = new RoomType("Walls", itemPaintColors1, itemLength1, itemWidthHeight1, itemSF1);
                 item_class obj_item_iclass = new item_class();
                 obj_item_iclass.doCalc(itemPaintColors1, itemLength1, itemWidthHeight1, itemRate1);
+
+                txtInterfaceEstimate1.Text = obj_item_iclass.itemEstTotal.ToString();
             }
             else
             {
@@ -109,6 +111,8 @@ namespace SoftwareDesignProjectPaintJob
                 RoomType newBaseboards = new RoomType("Baseboards", itemPaintColors2, itemLength2, itemWidthHeight2, itemSF2);
                 item_class obj_item_iclass = new item_class();
                 obj_item_iclass.doCalc(itemPaintColors2, itemLength2, itemWidthHeight2, itemRate2);
+
+                txtInterfaceEstimate2.Text = obj_item_iclass.itemEstTotal.ToString();
             }
             else
             {
@@ -129,6 +133,8 @@ namespace SoftwareDesignProjectPaintJob
                 RoomType newCrown = new RoomType("Crown", itemPaintColors3, itemLength3, itemWidthHeight3, itemSF2);
                 item_class obj_item_iclass = new item_class();
                 obj_item_iclass.doCalc(itemPaintColors3, itemLength3, itemWidthHeight3, itemRate3);
+
+                txtInterfaceEstimate3.Text = obj_item_iclass.itemEstTotal.ToString();
             }
             else
             {
@@ -158,7 +164,7 @@ namespace SoftwareDesignProjectPaintJob
             {
                 decimal itemLength5 = Convert.ToDecimal(txtItemLength5.Text);
                 decimal itemRate5 = Convert.ToDecimal(txtItemRate5.Text);
-                decimal itemPaintColors5 = Convert.ToDecimal(txtItemPaintColor4.Text);
+                decimal itemPaintColors5 = Convert.ToDecimal(txtItemPaintColor5.Text);
                 //decimal itemEstTotal5 = itemLength5 * itemRate5;
                 //txtInterfaceEstimate5.Text = Convert.ToString(itemEstTotal5);
                 
@@ -591,38 +597,80 @@ namespace SoftwareDesignProjectPaintJob
 
         private void txtItemPaintColor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+
+            {
+
                 e.Handled = true;
+
+                MessageBox.Show("Enter only whole numbers.", "Alert!");
+
+            }
         }
 
         private void txtItemPaintColor1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+
+            {
+
                 e.Handled = true;
+
+                MessageBox.Show("Enter only whole numbers.", "Alert!");
+
+            }
         }
 
         private void txtItemPaintColor2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+
+            {
+
                 e.Handled = true;
+
+                MessageBox.Show("Enter only whole numbers.", "Alert!");
+
+            }
         }
 
         private void txtItemPaintColor3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+
+            {
+
                 e.Handled = true;
+
+                MessageBox.Show("Enter only whole numbers.", "Alert!");
+
+            }
         }
 
         private void txtItemPaintColor4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+
+            {
+
                 e.Handled = true;
+
+                MessageBox.Show("Enter only whole numbers.", "Alert!");
+
+            }
         }
 
         private void txtItemPaintColor5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+
+            {
+
                 e.Handled = true;
+
+                MessageBox.Show("Enter only whole numbers.", "Alert!");
+
+            }
         }
 
         private void txtItemSF_KeyPress(object sender, KeyPressEventArgs e)
