@@ -31,9 +31,9 @@ namespace SoftwareDesignProjectPaintJob
 
     }
 
-    public class Ceilings : Item
+    public class RoomType: Item
     {
-        public Ceilings(string inItemName, decimal inItemColor, decimal inItemLength, decimal inItemWidthHeight, decimal inItemSF) : base(inItemName, inItemColor, inItemLength, inItemWidthHeight, inItemSF)
+        public RoomType(string inItemName, decimal inItemColor, decimal inItemLength, decimal inItemWidthHeight, decimal inItemSF) : base(inItemName, inItemColor, inItemLength, inItemWidthHeight, inItemSF)
         {
         }
     }

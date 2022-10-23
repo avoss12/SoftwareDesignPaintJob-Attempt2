@@ -48,7 +48,8 @@ namespace SoftwareDesignProjectPaintJob
 
         private void txtCeilingRate_TextChanged(object sender, EventArgs e)
         {
-
+            //decimal value;
+           // if (Decimal.TryParse(strOrderId, out value))
         }
 
         private void btnClicktoCalculate_Click(object sender, EventArgs e)
@@ -73,42 +74,119 @@ namespace SoftwareDesignProjectPaintJob
                 txtInterfaceEstimate.Text = "0";
             }
 
-            decimal itemLength1 = Convert.ToDecimal(txtItemLength1.Text);
-            decimal itemWidthHeight1 = Convert.ToDecimal(txtItemWidthHeight1.Text);
-            decimal itemRate1 = Convert.ToDecimal(txtItemRate1.Text);
-            decimal itemSF1 = itemLength1 * itemWidthHeight1;
-            decimal itemEstTotal1 = itemSF1 * itemRate1;
-            txtInterfaceEstimate1.Text = Convert.ToString(itemEstTotal1);
+            decimal itemSF1 = 0;
+            if (txtItemLength1.Text != "")
+            {
 
-            decimal itemLength2 = Convert.ToDecimal(txtItemLength2.Text);
-            decimal itemWidthHeight2 = Convert.ToDecimal(txtItemWidthHeight2.Text);
-            decimal itemRate2 = Convert.ToDecimal(txtItemRate2.Text);
-            decimal itemSF2 = itemLength2 * itemWidthHeight2;
-            decimal itemEstTotal2 = itemSF2 * itemRate2;
-            txtInterfaceEstimate2.Text = Convert.ToString(itemEstTotal2);
+                decimal itemLength1 = Convert.ToDecimal(txtItemLength1.Text);
+                decimal itemWidthHeight1 = Convert.ToDecimal(txtItemWidthHeight1.Text);
+                decimal itemRate1 = Convert.ToDecimal(txtItemRate1.Text);
+                decimal itemPaintColors1 = Convert.ToDecimal(txtItemPaintColor1.Text);
+                itemSF1 = itemLength1 * itemWidthHeight1;
+                // decimal itemEstTotal1 = itemSF1 * itemRate1;
+                //txtInterfaceEstimate1.Text = Convert.ToString(itemEstTotal1);
 
-            decimal itemLength3 = Convert.ToDecimal(txtItemLength3.Text);
-            decimal itemWidthHeight3 = Convert.ToDecimal(txtItemWidthHeight3.Text);
-            decimal itemRate3 = Convert.ToDecimal(txtItemRate3.Text);
-            decimal itemSF3 = itemLength3 * itemWidthHeight3;
-            decimal itemEstTotal3 = itemSF3 * itemRate3;
-            txtInterfaceEstimate3.Text = Convert.ToString(itemEstTotal3);
+                RoomType newWalls = new RoomType("Walls", itemPaintColors1, itemLength1, itemWidthHeight1, itemSF1);
+                item_class obj_item_iclass = new item_class();
+                obj_item_iclass.doCalc(itemPaintColors1, itemLength1, itemWidthHeight1, itemRate1);
+            }
+            else
+            {
+                txtInterfaceEstimate1.Text = "0";
+            }
 
-            decimal itemLength4 = Convert.ToDecimal(txtItemLength4.Text);
-            decimal itemRate4 = Convert.ToDecimal(txtItemRate4.Text);
-            decimal itemEstTotal4 = itemLength4 * itemRate4;
-            txtInterfaceEstimate4.Text = Convert.ToString(itemEstTotal4);
+            decimal itemSF2 = 0;
+            if (txtItemLength2.Text != "")
+            {
+                decimal itemLength2 = Convert.ToDecimal(txtItemLength2.Text);
+                decimal itemWidthHeight2 = Convert.ToDecimal(txtItemWidthHeight2.Text);
+                decimal itemRate2 = Convert.ToDecimal(txtItemRate2.Text);
+                decimal itemPaintColors2 = Convert.ToDecimal(txtItemPaintColor2.Text);
+                itemSF2 = itemLength2 * itemWidthHeight2;
+                //decimal itemEstTotal2 = itemSF2 * itemRate2;
+                //txtInterfaceEstimate2.Text = Convert.ToString(itemEstTotal2);
 
-            decimal itemLength5 = Convert.ToDecimal(txtItemLength5.Text);
-            decimal itemRate5 = Convert.ToDecimal(txtItemRate5.Text);
-            decimal itemEstTotal5 = itemLength5 * itemRate5;
-            txtInterfaceEstimate5.Text = Convert.ToString(itemEstTotal5);
+                RoomType newBaseboards = new RoomType("Baseboards", itemPaintColors2, itemLength2, itemWidthHeight2, itemSF2);
+                item_class obj_item_iclass = new item_class();
+                obj_item_iclass.doCalc(itemPaintColors2, itemLength2, itemWidthHeight2, itemRate2);
+            }
+            else
+            {
+                txtInterfaceEstimate2.Text = "0";
+            }
 
+            decimal itemSF3 = 0;
+            if (txtItemLength3.Text != "")
+            {
+                decimal itemLength3 = Convert.ToDecimal(txtItemLength3.Text);
+                decimal itemWidthHeight3 = Convert.ToDecimal(txtItemWidthHeight3.Text);
+                decimal itemRate3 = Convert.ToDecimal(txtItemRate3.Text);
+                decimal itemPaintColors3 = Convert.ToDecimal(txtItemPaintColor3.Text);
+                itemSF3 = itemLength3 * itemWidthHeight3;
+                //decimal itemEstTotal3 = itemSF3 * itemRate3;
+                //txtInterfaceEstimate3.Text = Convert.ToString(itemEstTotal3);
+
+                RoomType newCrown = new RoomType("Crown", itemPaintColors3, itemLength3, itemWidthHeight3, itemSF2);
+                item_class obj_item_iclass = new item_class();
+                obj_item_iclass.doCalc(itemPaintColors3, itemLength3, itemWidthHeight3, itemRate3);
+            }
+            else
+            {
+                txtInterfaceEstimate3.Text = "0";
+            }
+
+            if (txtItemLength4.Text != "")
+            {
+                decimal itemLength4 = Convert.ToDecimal(txtItemLength4.Text);
+                decimal itemRate4 = Convert.ToDecimal(txtItemRate4.Text);
+                decimal itemPaintColors4 = Convert.ToDecimal(txtItemPaintColor4.Text);
+                // decimal itemEstTotal4 = itemLength4 * itemRate4;
+                // txtInterfaceEstimate4.Text = Convert.ToString(itemEstTotal4);
+
+                RoomType newDoors = new RoomType("Doors", itemPaintColors4, itemLength4, 1, 1);
+                item_class obj_item_iclass = new item_class();
+                obj_item_iclass.doCalc(itemPaintColors4, itemLength4, 1, itemRate4);
+
+                txtInterfaceEstimate4.Text = obj_item_iclass.itemEstTotal.ToString();
+            }
+            else
+            {
+                txtInterfaceEstimate4.Text = "0";
+            }
+
+            if (txtItemLength5.Text != "")
+            {
+                decimal itemLength5 = Convert.ToDecimal(txtItemLength5.Text);
+                decimal itemRate5 = Convert.ToDecimal(txtItemRate5.Text);
+                decimal itemPaintColors5 = Convert.ToDecimal(txtItemPaintColor4.Text);
+                //decimal itemEstTotal5 = itemLength5 * itemRate5;
+                //txtInterfaceEstimate5.Text = Convert.ToString(itemEstTotal5);
+                
+                RoomType newWindows = new RoomType("Windows", itemPaintColors5, itemLength5, 1, 1);
+                item_class obj_item_iclass = new item_class();
+                obj_item_iclass.doCalc(itemPaintColors5, itemLength5, 1, itemRate5);
+
+                txtInterfaceEstimate4.Text = obj_item_iclass.itemEstTotal.ToString();
+            }
+            else
+            {
+                txtInterfaceEstimate4.Text = "0";
+            }
             txtItemSF.Text = Convert.ToString(itemSF);
             txtItemSF1.Text = Convert.ToString(itemSF1);
             txtItemSF2.Text = Convert.ToString(itemSF2);
-            txtItemSF3.Text = Convert.ToString(itemSF3);           
-            decimal estimateTotal = obj_item_iclass.itemEstTotal + itemEstTotal1 + itemEstTotal2 + itemEstTotal3 + itemEstTotal4 + itemEstTotal5;
+            txtItemSF3.Text = Convert.ToString(itemSF3);
+
+            // convert interfaceEstimate (ceilings est) to decimal before calc
+            decimal ceilingEstTotal = Convert.ToDecimal(txtInterfaceEstimate.Text);
+            decimal wallsEstTotal = Convert.ToDecimal(txtInterfaceEstimate1.Text);
+            decimal baseboardsEstTotal = Convert.ToDecimal(txtInterfaceEstimate2.Text);
+            decimal crownEstTotal = Convert.ToDecimal(txtInterfaceEstimate3.Text);
+            decimal doorsEstTotal = Convert.ToDecimal(txtInterfaceEstimate4.Text);
+            decimal windowsEstTotal = Convert.ToDecimal(txtInterfaceEstimate4.Text);
+
+
+            decimal estimateTotal = ceilingEstTotal + wallsEstTotal + baseboardsEstTotal + doorsEstTotal + doorsEstTotal + windowsEstTotal;
             txtEstimateTotal.Text = Convert.ToString(estimateTotal);
 
 
@@ -320,134 +398,134 @@ namespace SoftwareDesignProjectPaintJob
 
         private void txtItemLength_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(!char.IsNumber(e.KeyChar))
-            e.Handled = true;
+        //    if(!char.IsNumber(e.KeyChar))
+        //    e.Handled = true;
         }
 
         private void txtItemLength1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemLength2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemLength3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemLength4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemLength5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemWidthHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemWidthHeight1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemWidthHeight2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemWidthHeight3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemRate_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemRate1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemRate2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemRate3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemRate4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemRate5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemPaintColor_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemPaintColor1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemPaintColor2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemPaintColor3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemPaintColor4_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemPaintColor5_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsNumber(e.KeyChar))
-                e.Handled = true;
+            //if (!char.IsNumber(e.KeyChar))
+            //    e.Handled = true;
         }
 
         private void txtItemSF_KeyPress(object sender, KeyPressEventArgs e)
